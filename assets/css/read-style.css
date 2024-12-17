@@ -1,0 +1,374 @@
+.read-container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+.chapter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.header-info {
+    flex: 1;
+}
+
+.book-title {
+    margin: 0;
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+.book-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.book-title a:hover {
+    color: var(--darkturk);
+}
+
+.chapter-title {
+    margin: 0.5rem 0;
+    font-size: 1.75rem;
+    color: var(--darkturk);
+}
+
+.author {
+    margin: 0;
+    color: #6b7280;
+}
+
+.author a {
+    color: var(--darkpeach);
+    text-decoration: none;
+}
+
+.chapters-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #374151;
+    transition: all 0.2s;
+}
+
+.chapters-toggle:hover {
+    background: #f9fafb;
+}
+
+.chapter-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #1f2937;
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+}
+
+.chapter-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #374151;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    background: #f9fafb;
+}
+
+.nav-btn.prev {
+    margin-right: auto;
+}
+
+.nav-btn.next {
+    margin-left: auto;
+}
+
+/* Comments Section */
+.comments-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.comments-section h2 {
+    margin: 0 0 1.5rem 0;
+    color: var(--darkturk);
+}
+
+.comment-form {
+    margin-bottom: 2rem;
+}
+
+.comment-form textarea,
+.reply-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.comment-form button,
+.reply-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.comment-form button[type="submit"],
+.reply-form button[type="submit"] {
+    background: var(--darkturk);
+    color: white;
+}
+
+.cancel-reply {
+    background: #f3f4f6;
+    color: #374151;
+    margin-right: 0.5rem;
+}
+
+.login-prompt {
+    text-align: center;
+    padding: 1rem;
+    background: #f3f4f6;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.login-prompt a {
+    color: var(--darkturk);
+    text-decoration: none;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.comment {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1.5rem;
+}
+
+.comment:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: 500;
+    color: #374151;
+}
+
+.timestamp {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.comment-content {
+    margin-bottom: 0.75rem;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+.reply-btn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.reply-btn:hover {
+    color: var(--darkturk);
+}
+
+.replies {
+    margin-left: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.reply {
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+}
+
+.reply-form {
+    margin-top: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* Chapters Sidebar */
+.chapters-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    border-left: 1px solid #e5e7eb;
+    padding: 1rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.chapters-sidebar.show {
+    right: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    color: var(--darkturk);
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.close-sidebar:hover {
+    background: #f3f4f6;
+}
+
+.chapters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
+}
+
+.chapters-list .chapter-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem;
+    text-decoration: none;
+    color: #374151;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+}
+
+.chapters-list .chapter-item:hover {
+    background: #f3f4f6;
+}
+
+.chapters-list .chapter-item.active {
+    background: var(--lightpink);
+    color: var(--darkturk);
+}
+
+.chapters-list .chapter-number {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.chapters-list .chapter-title {
+    font-size: 1rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .chapter-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .chapters-toggle {
+        align-self: flex-end;
+    }
+
+    .chapter-content {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .chapter-navigation {
+        flex-wrap: wrap;
+    }
+
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .replies {
+        margin-left: 1rem;
+    }
+
+    .chapters-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+}

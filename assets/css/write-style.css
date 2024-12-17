@@ -1,0 +1,188 @@
+.write-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.write-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.write-header h1 {
+    font-size: 2rem;
+    color: var(--darkturk);
+}
+
+.new-book-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--darkturk);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.new-book-btn:hover {
+    background-color: var(--turk);
+}
+
+.write-tabs {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+}
+
+.write-tabs .tab {
+    border: none;
+    background: none;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #6b7280;
+    cursor: pointer;
+    position: relative;
+}
+
+.write-tabs .tab.active {
+    color: var(--darkpeach);
+}
+
+.write-tabs .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--darkpeach);
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+.book-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+}
+
+.book-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.book-cover {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.book-details h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: var(--darkturk);
+}
+
+.book-details .chapters {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.book-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    position: relative;
+    padding: 0.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 9999px;
+    color: #6b7280;
+}
+
+.action-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.action-btn.edit:hover {
+    color: #2563eb;
+    background-color: #dbeafe;
+}
+
+.action-btn.publish:hover {
+    color: #16a34a;
+    background-color: #dcfce7;
+}
+
+.action-btn.unpublish:hover {
+    color: #ea580c;
+    background-color: #ffedd5;
+}
+
+.action-btn.delete:hover {
+    color: #dc2626;
+    background-color: #fee2e2;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.action-btn:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.no-books {
+    text-align: center;
+    color: #6b7280;
+    padding: 2rem;
+}
+
+@media (max-width: 640px) {
+    .book-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .book-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

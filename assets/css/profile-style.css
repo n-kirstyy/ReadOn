@@ -1,0 +1,482 @@
+/* profile-style.css */
+.profile-container {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 0 1.5rem;
+}
+
+.profile-content {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-pic-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--turk);
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: white;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid var(--turk);
+}
+
+.camera-icon span {
+    font-size: 20px;
+    color: var(--darkturk);
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-info h1 {
+    color: var(--darkpeach);
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    color: var(--darkturk);
+    font-size: 1.1rem;
+}
+
+/* Profile Navigation */
+.profile-tabs {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 2px solid #e5e7eb;
+    margin: 2rem 0;
+}
+
+.tab {
+    border: none;
+    background: none;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    color: #6b7280;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab:hover {
+    color: var(--darkturk);
+}
+
+.tab.active {
+    color: var(--darkpeach);
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--darkpeach);
+}
+
+/* Tab Content */
+.tab-content {
+    display: block;
+    min-height: 200px;
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+/* Bio Section */
+.bio-container {
+    position: relative;
+    padding: 1.5rem;
+    border: 1px solid var(--turk);
+    border-radius: 0.5rem;
+    line-height: 1.6;
+}
+
+.edit-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--turk);
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-btn:hover {
+    background: var(--darkturk);
+}
+
+.bio-edit-controls {
+    margin-top: 1rem;
+}
+
+.bio-edit-controls.hidden {
+    display: none;
+}
+
+#bio-editor {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    border: 1px solid var(--turk);
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+
+/* Works Grid */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.book-card {
+    background: white;
+    border: 1px solid var(--turk);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+}
+
+.book-cover {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.book-info {
+    padding: 1rem;
+}
+
+.book-info h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--darkturk);
+    font-size: 1.1rem;
+}
+
+.genre {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* Reading Lists */
+.lists-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.list-card {
+    border: 1px solid var(--turk);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.list-header {
+    padding: 1.5rem;
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+.list-header h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--darkturk);
+    font-size: 1.25rem;
+}
+
+.list-description {
+    color: #6b7280;
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+}
+
+.list-stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.book-count {
+    color: var(--darkpeach);
+    font-size: 0.9rem;
+}
+
+.genre-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.genre-tag {
+    background: var(--lightpink);
+    color: var(--darkpeach);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+
+.list-books {
+    padding: 1.5rem;
+    border-top: 1px solid var(--turk);
+}
+
+.empty-message {
+    text-align: center;
+    color: #6b7280;
+    padding: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .profile-pic-container {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .profile-tabs {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .book-cover {
+        height: 220px;
+    }
+
+    .list-header {
+        padding: 1rem;
+    }
+
+    .list-books {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 0 1rem;
+    }
+
+    .profile-content {
+        padding: 1rem;
+    }
+
+    .user-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+/* Interactive States */
+.edit-btn span {
+    font-size: 20px;
+}
+
+#save-bio {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: var(--darkturk);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+#save-bio:hover {
+    background: var(--turk);
+}
+
+#save-bio.show {
+    display: block;
+}
+
+/* Loading States */
+.loading-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+    color: var(--darkturk);
+}
+
+.loading-indicator span {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* List Books Display */
+.list-books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.list-book-card {
+    background: white;
+    border: 1px solid var(--turk);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+}
+
+.list-book-card:hover {
+    transform: translateY(-2px);
+}
+
+.list-book-cover {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.list-book-info {
+    padding: 1rem;
+}
+
+.list-book-title {
+    margin: 0 0 0.25rem 0;
+    color: var(--darkturk);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.list-book-author {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Error States */
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    color: #dc2626;
+    background: #fee2e2;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* Show/Hide Utilities */
+.hidden {
+    display: none !important;
+}
+
+/* Genre Tag Colors */
+.genre-tag {
+    transition: background-color 0.2s;
+}
+
+.genre-tag:hover {
+    background: var(--peach);
+}
+
+/* Bio Text Formatting */
+#bio-text {
+    white-space: pre-wrap;
+    min-height: 2rem;
+}
+
+/* Empty State Styling */
+.empty-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6b7280;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    border: 2px dashed #e5e7eb;
+}
+
+.empty-message span {
+    display: block;
+    font-size: 3rem;
+    color: #d1d5db;
+    margin-bottom: 1rem;
+}

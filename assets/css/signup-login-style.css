@@ -1,0 +1,110 @@
+:root {
+    --lightpink: rgb(255, 246, 236);
+    --turk: rgb(157, 188, 183);
+    --darkturk: rgb(142, 178, 174);
+    --peach: rgb(250, 229, 203);
+    --darkpeach: rgb(216, 153, 123);
+}
+
+
+.signup-login {
+    width: 100%;
+    min-height: 15rem;
+    background: url("../images/book-background.jpg") center no-repeat;
+    background-size: cover;
+    padding-top:15%;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-login form{
+    width: 34%;
+    border: 0.2rem solid var(--darkturk);
+    color: var(--darkturk);
+    border-radius: 1rem;
+    padding: 3%;
+}
+
+.signup-login h1 {
+    font-size: 200%;
+    text-align: center;
+}
+
+.signup-login .input-field{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.884);
+    border-radius: 2rem;
+    margin: 2% 0%;
+}
+
+
+.input-field input{
+    width: 94%;
+    height: 100%;
+    background: transparent;
+    font-size: 100%;
+    padding: 5%;
+    outline: none;
+    border: none;
+    border: 0.15rem solid var(--darkturk);
+    border-radius: 2rem;
+}
+
+.input-field input::placeholder{
+    color: black;
+}
+
+
+.signup-login label input{
+    accent-color: white;
+    margin-right: 3px;
+}
+
+.forgot-pass a{
+    font-size: 70%;
+    margin: 3% 0%;
+}
+
+.signup-login .button{
+    width: 100%;
+    margin-top: 3%;
+    background: var(--darkturk);
+    color: white;
+    border:none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 120%;
+    padding: 2%;
+    font-weight: bold;
+}
+
+.signup-login .button:hover{
+    background-color: var(--turk);
+}
+
+.switch-login-signup{
+    color: black;
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.switch-login-signup p a{
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--darkturk);
+}
+
+.switch-login-signup a:hover{
+    text-decoration: underline;
+}
+
+.text-danger{
+    font-size: 70%;
+    color: red;
+    margin: 1% 0% 1% 0%;
+    padding: 1%;
+    font-weight: bold;
+}

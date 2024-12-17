@@ -1,0 +1,40 @@
+
+.main {
+    width: 100%;
+    min-height: 15rem;
+    background: url("assets/images/book-background.jpg") center no-repeat;
+    background-size: cover;
+    padding-top:15%;
+    display: flex;
+    justify-content: center;
+}
+
+.main div{
+    line-height: 1.5;
+    width: 45%;
+    padding: 2%;
+    border: 0.1rem solid var(--darkturk);
+    border-radius: 0.5rem;
+    background-color: var(--lightpink);
+}
+
+.main  h1{
+    font-size: 150%;
+}
+
+.main p{
+    font-size: 110%;
+}
+
+.main a{
+    text-decoration: none;
+    padding: 2%;
+    border: 0.1rem solid var(--darkturk);
+    background-color: var(--darkturk);
+    color: var(--lightpink);
+    border-radius: 0.5rem;
+}
+
+.main a:hover{
+    background-color: var(--turk);
+}
