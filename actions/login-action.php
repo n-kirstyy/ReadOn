@@ -47,6 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['username'] = $user['username'];
                     $_SESSION['role'] = $user['role'];
 
+                    header("Location: ../view/all-books.php");
+                    exit();
                 } else {
                     $password_error = "Invalid password.";
                 }
@@ -60,6 +62,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
-
-
-?>
