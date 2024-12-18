@@ -90,21 +90,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!$error) {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $date_joined = date('Y-m-d H:i:s');
-
+    
         $statement = $dbConnection->prepare(
             "INSERT INTO users (username, email, password, date_joined) VALUES (?, ?, ?, ?)"
         );
         $statement->bind_param('ssss', $username, $email, $hashed_password, $date_joined);
         $statement->execute();
-        $insert_id = $statement->insert_id;
         $statement->close();
-
-        // Store user data in session
-        $_SESSION["user_id"] = $insert_id;
-        $_SESSION["username"] = $username;
-        $_SESSION["email"] = $email;
-        $_SESSION["date_joined"] = $date_joined;
-
+    
+        // Remove all session-related code
         $successMessage = "User registered successfully.";
         header("location: ../view/login.php");
         exit;
